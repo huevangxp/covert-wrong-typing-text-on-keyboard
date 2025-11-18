@@ -2,7 +2,7 @@
     <div class="text-center">
         <v-img src="/logo.png" width="400" height="400"
             class="mx-auto" />
-        <v-card-title class="mt-4">ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
+        <v-card-title class="">ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
             ເມື່ອລືມກົດປ່ຽນພາສາ</v-card-title>
     </div>
     <v-container>
