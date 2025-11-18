@@ -5,7 +5,7 @@
                 <v-app-bar-title>My App</v-app-bar-title>
             </v-app-bar>
             <v-main>
-                <v-container>
+                <v-container fluid>
                     <slot />
                 </v-container>
             </v-main>
