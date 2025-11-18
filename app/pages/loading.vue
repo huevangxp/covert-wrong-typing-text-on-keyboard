@@ -22,10 +22,10 @@
 }
 
 .loading span{
-    width: 4px;
+    width: 6px;
     height: 50px;
     background-color: #008080;
-    border-radius: 2%;
+    border-radius: 2px;
     animation: loading 1s ease-in-out infinite;
 }
 
