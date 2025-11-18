@@ -29,7 +29,7 @@
     height: 120px;
     background-color: #008080; /* main teal */
     border-radius: 4px;
-    animation: scale 1.2s ease-in-out infinite;
+    animation: scale 1.5s ease-in-out infinite;
   }
   
   /* Beautiful color gradient */
