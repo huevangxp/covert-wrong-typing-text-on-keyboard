@@ -18,7 +18,7 @@
     </v-container>
     <v-container>
         <v-card class="mt-4">
-            <v-card-text>ຜິດຜິດທີ່ປ່ຽນພາສາ:</v-card-text>
+            <v-card-text class="text-underline">ຜິດຜິດທີ່ປ່ຽນພາສາ:</v-card-text>
             <v-card-text >{{ result }}</v-card-text>
         </v-card>
     </v-container>
