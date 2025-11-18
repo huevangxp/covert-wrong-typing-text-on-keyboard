@@ -12,7 +12,7 @@
             </v-col>
         </v-row>
         
-        <v-btn @click="convert" class="font-weight-bold">ປ່ຽນພາສາ</v-btn>
+        <v-btn @click="convert" class="font-weight-bold py-3">ປ່ຽນພາສາ</v-btn>
     </v-container>
     <v-container>
         <v-card class="mt-4">
