@@ -49,7 +49,7 @@
 /* add key frame */
 @keyframes scale {
     0%,40%, 100%{
-        transform: scaleY(1);
+        transform: scaleY(0.05);
     }
     20%{
         transform: scaleY(1);
