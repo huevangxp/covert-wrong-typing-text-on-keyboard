@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: 'My App',
+          content: 'Covert English To Lao',
         },
       ],
       link: [
