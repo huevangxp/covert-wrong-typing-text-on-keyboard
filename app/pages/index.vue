@@ -18,3 +18,12 @@
     </v-card>
 </v-container>
 </template>
+
+<script setup>
+const text = ref('')
+const result = ref('')
+
+function convert() {
+    result.value = text.value
+}
+</script>
