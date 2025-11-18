@@ -10,4 +10,11 @@
             </v-col>
         </v-row>
     </v-container>
+    <v-container>
+        <v-row>
+            <v-col cols="12">
+                <v-textarea v-model="text" label="Text" />
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
