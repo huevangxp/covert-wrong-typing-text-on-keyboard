@@ -4,7 +4,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   app: {
     head: {
-      titleTemplate: 'Convert English to Lao',
+      titleTemplate: 'ພິມຜິດ',
       link: [
         {
           rel: 'stylesheet',
