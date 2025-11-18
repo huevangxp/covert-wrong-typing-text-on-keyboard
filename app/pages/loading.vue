@@ -23,7 +23,7 @@
 
 .loading span{
     width: 6px;
-    height: 50px;
+    height: 100px;
     background-color: #008080;
     border-radius: 2px;
     animation: loading 1s ease-in-out infinite;
