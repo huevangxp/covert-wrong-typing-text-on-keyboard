@@ -9,8 +9,6 @@
         <span></span>
         <span></span>
         <span></span>
-        <span></span>
-        <span></span>
       </div>
     </div>
   </template>
@@ -43,8 +41,6 @@
   .loading span:nth-child(6) { background-color: #007a74; animation-delay: 0.5s; }
   .loading span:nth-child(7) { background-color: #009688; animation-delay: 0.6s; }
   .loading span:nth-child(8) { background-color: #00b3a4; animation-delay: 0.7s; }
-  .loading span:nth-child(9) { background-color: #4dd0c5; animation-delay: 0.8s; }
-  .loading span:nth-child(10) { background-color: #80ece4; animation-delay: 0.9s; }
   
   /* Smooth scale effect */
   @keyframes scale {
