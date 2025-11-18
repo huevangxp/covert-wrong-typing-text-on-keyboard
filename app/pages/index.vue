@@ -28,7 +28,7 @@ const result = ref('')
 function convert() {
   const map = {
     1:"ຢ", !='1',
-    2:"ຟ", @=''
+    2:"ຟ", @='',
     3:"ໂ",
     4:"ຖ",
     5:"ຸ",
