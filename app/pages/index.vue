@@ -13,8 +13,10 @@
     <v-container>
        <v-btn @click="convert">Convert</v-btn>
     </v-container>
+    <v-ccontainer>
     <v-card class="mt-4">
          <v-card-title>Result</v-card-title>
          <v-card-text>{{ result }}</v-card-text>
     </v-card>
+</v-ccontainer>
 </template>
