@@ -20,6 +20,7 @@
 </template>
 
 <script setup>
+
 const text = ref('')
 const result = ref('')
 
