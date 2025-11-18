@@ -23,7 +23,7 @@
   /* Base animation */
   .loading span {
     width: 8px;
-    height: 200px;
+    height: 120px;
     background-color: #008080; /* main teal */
     border-radius: 4px;
     animation: scale 0.9s ease-in-out infinite;
