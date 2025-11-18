@@ -56,7 +56,7 @@ function convert() {
 
   let output = ''
   for (let ch of text.value) {
-    output += map[ch] ?? ch
+    output += laoKeyboardMap[ch] ?? ch
   }
 
   result.value = output
