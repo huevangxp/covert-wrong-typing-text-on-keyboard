@@ -28,9 +28,8 @@ const result = ref('')
 function convert() {
     const laoKeyboardMap = {
     // Top Row (Numbers and Symbols)
-    '1': "ຢ", '2': "ຟ", '3': "ໂ", '4': "ຖ", '5': "ຸ", 
+    "`":`"`, '1': "ຢ", '2': "ຟ", '3': "ໂ", '4': "ຖ", '5': "ຸ", 
     '6': "ຕ", '7': "ຫ", '0': "ຂ", '-': "ຊ", '=': "ຍ",
-    '-': "ໜ", '=': "ບ",
     
     // Top Row (Shifted Numbers/Symbols)
     '!': "໙", '@': "໘", '#': "໗", '$': "໖", '%': "໕", 
