@@ -42,7 +42,7 @@
     animation-delay: 0.6s;
 }
 .loading span:nth-child(5){
-    background-color: #008;
+    background-color: #009880;
     animation-delay: 0.5s;
 }
 
