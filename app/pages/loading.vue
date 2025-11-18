@@ -1,60 +1,49 @@
 <template>
-    <div class="h-screen w-screen d-flex align-center justify-center">
-         <div class="loading">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-         </div>
+    <div class="h-screen w-screen d-flex align-center justify-center bg-white">
+      <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-</template>
-
-<style scoped>
-
-.loading{
+  </template>
+  
+  <style scoped>
+  .loading {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100px;
+    align-items: flex-end;
+    width: 120px;
     height: 100px;
-    gap:6px;
-}
-
-.loading span{
-    width: 6px;
-    height: 100px;
-    background-color: #008080;
-    border-radius: 2px;
-    animation: scale -0.9s ease-in-out infinite;
-}
-
-.loading span:nth-child(2){
-    background-color: #008;
-    animation-delay: -0.8s;
-}
-.loading span:nth-child(3){
-    background-color: #3242;
-    animation-delay: -0.7s;
-}
-.loading span:nth-child(4){
-    background-color: #786785;
-    animation-delay: -0.6s;
-}
-.loading span:nth-child(5){
-    background-color: #009880;
-    animation-delay: -0.5s;
-}
-
-/* add key frame */
-@keyframes scale {
-    0%,40%, 100%{
-        transform: scaleY(0.05);
-    }
-    20%{
-        transform: scaleY(1);
-    }
+    gap: 8px;
+  }
   
-}
-
-</style>
+  /* Base animation */
+  .loading span {
+    width: 8px;
+    height: 60px;
+    background-color: #008080; /* main teal */
+    border-radius: 4px;
+    animation: scale 0.9s ease-in-out infinite;
+  }
+  
+  /* Beautiful color gradient */
+  .loading span:nth-child(1) { background-color: #007a74; animation-delay: 0s; }
+  .loading span:nth-child(2) { background-color: #009688; animation-delay: 0.1s; }
+  .loading span:nth-child(3) { background-color: #00b3a4; animation-delay: 0.2s; }
+  .loading span:nth-child(4) { background-color: #4dd0c5; animation-delay: 0.3s; }
+  .loading span:nth-child(5) { background-color: #80ece4; animation-delay: 0.4s; }
+  
+  /* Smooth scale effect */
+  @keyframes scale {
+    0%, 40%, 100% {
+      transform: scaleY(0.2);
+    }
+    20% {
+      transform: scaleY(1);
+    }
+  }
+  </style>
+  
