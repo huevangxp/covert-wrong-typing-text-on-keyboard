@@ -26,7 +26,7 @@
     height: 100px;
     background-color: #008080;
     border-radius: 2px;
-    animation: loading 1s ease-in-out infinite;
+    animation: scale 0.9s ease-in-out infinite;
 }
 
 </style>
