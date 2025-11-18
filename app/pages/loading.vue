@@ -1,5 +1,11 @@
 <template>
     <div class="h-screen w-screen d-flex align-center justify-center">
-        <v-progress-circular indeterminate color="primary" size="64" />
+         <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
     </div>
 </template>
