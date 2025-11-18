@@ -29,7 +29,7 @@ function convert() {
     const laoKeyboardMap = {
     // Top Row (Numbers and Symbols)
     '1': "ຢ", '2': "ຟ", '3': "ໂ", '4': "ຖ", '5': "ຸ", 
-    '6': "ຕ", '7': "ຫ", '8': "ຂ", '9': "ຊ", '0': "ຍ",
+    '6': "ຕ", '7': "ຫ", '0': "ຂ", '-': "ຊ", '=': "ຍ",
     '-': "ໜ", '=': "ບ",
     
     // Top Row (Shifted Numbers/Symbols)
@@ -62,7 +62,7 @@ function convert() {
 
   let output = ''
   for (let ch of text.value) {
-    output += laoKeyboardMap[ch] ?? ch
+    output += map[ch] ?? ch
   }
 
   result.value = output
