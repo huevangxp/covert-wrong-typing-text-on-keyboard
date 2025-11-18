@@ -13,8 +13,8 @@
     <v-container>
        <v-btn @click="convert">Convert</v-btn>
     </v-container>
-    <v-container>
+    <v-card>
          <v-card-title>Result</v-card-title>
          <v-card-text>{{ result }}</v-card-text>
-    </v-container>
+    </v-card>
 </template>
