@@ -29,4 +29,9 @@
     animation: scale 0.9s ease-in-out infinite;
 }
 
+.loading span:nth-child(2){
+    background-color: #008;
+    animation-delay: 0.2s;
+}
+
 </style>
