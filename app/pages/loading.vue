@@ -26,20 +26,20 @@
     height: 100px;
     background-color: #008080;
     border-radius: 2px;
-    animation: scale 0.9s ease-in-out infinite;
+    animation: scale -0.9s ease-in-out infinite;
 }
 
 .loading span:nth-child(2){
     background-color: #008;
-    animation-delay: 0.8s;
+    animation-delay: -0.8s;
 }
 .loading span:nth-child(3){
     background-color: #3242;
-    animation-delay: 0.7s;
+    animation-delay: -0.7s;
 }
 .loading span:nth-child(4){
     background-color: #786785;
-    animation-delay: 0.6s;
+    animation-delay: -0.6s;
 }
 .loading span:nth-child(5){
     background-color: #009880;
