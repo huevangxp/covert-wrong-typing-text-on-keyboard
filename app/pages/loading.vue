@@ -31,7 +31,7 @@
 
 .loading span:nth-child(2){
     background-color: #008;
-    animation-delay: 0.2s;
+    animation-delay: 0.8s;
 }
 
 </style>
