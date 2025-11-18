@@ -16,7 +16,7 @@
     <v-container>
         <v-card class="mt-4">
             <v-card-title>ຜິດຜິດທີ່ປ່ຽນພາສາ:</v-card-title>
-            <v-card-text placeholder="ຜິດຜິດທີ່ປ່ຽນພາສາ">{{ result }}</v-card-text>
+            <v-card-text >{{ result }}</v-card-text>
         </v-card>
     </v-container>
 </template>
