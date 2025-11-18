@@ -43,7 +43,7 @@
 }
 .loading span:nth-child(5){
     background-color: #009880;
-    animation-delay: 0.5s;
+    animation-delay: -0.5s;
 }
 
 /* add key frame */
