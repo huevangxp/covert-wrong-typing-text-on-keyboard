@@ -4,24 +4,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Covert English To Lao',
-      meta: [
-        {
-          charset: 'utf-8',
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1',
-        },
-        {
-          name: 'description',
-          content: 'Covert English To Lao',
-        },
-      ],
-      link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/vuetify@3.2.17/dist/vuetify.min.css',
-        },
-      ],
+      titleTemplate: '%s | Convert English to Lao',
     },
   },
   compatibilityDate: '2025-07-15',
