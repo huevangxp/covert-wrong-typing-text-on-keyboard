@@ -4,7 +4,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'My App',
+      title: 'Covert English To Lao',
       meta: [
         {
           charset: 'utf-8',
