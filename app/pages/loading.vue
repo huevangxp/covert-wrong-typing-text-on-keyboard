@@ -33,5 +33,17 @@
     background-color: #008;
     animation-delay: 0.8s;
 }
+.loading span:nth-child(3){
+    background-color: #008;
+    animation-delay: 0.7s;
+}
+.loading span:nth-child(4){
+    background-color: #008;
+    animation-delay: 0.6s;
+}
+.loading span:nth-child(5){
+    background-color: #008;
+    animation-delay: 0.5s;
+}
 
 </style>
