@@ -8,7 +8,7 @@
     <v-container>
         <v-row>
             <v-col cols="12">
-                <v-textarea v-model="text" label="ຂໍ້ຄວາມ" />
+                <v-textarea v-model="text" label="ຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ" />
             </v-col>
         </v-row>
         <v-btn @click="convert">ປ່ຽນພາສາ</v-btn>
