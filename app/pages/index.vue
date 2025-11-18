@@ -11,6 +11,9 @@
         </v-row>
     </v-container>
     <v-container>
+       <v-btn @click="convert">Convert</v-btn>
+    </v-container>
+    <v-container>
         <v-row>
             <v-col cols="12">
                 <v-textarea v-model="text" label="Text" />
