@@ -11,8 +11,8 @@
                 <v-textarea v-model="text" placeholder="ຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ" />
             </v-col>
         </v-row>
-        <v-spacer></v-spacer>
-        <v-btn @click="convert">ປ່ຽນພາສາ</v-btn>
+        
+        <v-btn @click="convert" class="mt-4">ປ່ຽນພາສາ</v-btn>
     </v-container>
     <v-container>
         <v-card class="mt-4">
