@@ -22,7 +22,7 @@
 }
 
 .loading span{
-    width: 12px;
+    width: 4px;
     height: 50px;
     background-color: #008080;
     border-radius: 50%;
