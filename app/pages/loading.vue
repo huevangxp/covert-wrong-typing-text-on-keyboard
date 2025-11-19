@@ -26,7 +26,7 @@
   </template>
   
   <script setup>
-  const dialog = ref(false)
+  const dialog = ref(true)
   </script>
   
   <style scoped>
