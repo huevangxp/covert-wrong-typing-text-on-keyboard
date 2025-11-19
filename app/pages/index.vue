@@ -158,10 +158,10 @@ function fallbackCopy(text) {
     document.execCommand("copy");
     // console.log("Copied (fallback):", text);
     // add toast
-    toast.success({ title: 'Success!', message: 'Your action was completed successfully.' }, { position: 'top-center', timeout: 5000 });
+    toast.success({ title: 'ສຳເລັດ!', message: 'ການເພີ່ມຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ' }, { position: 'top-center', timeout: 5000 });
   } catch (err) {
     console.error("Fallback copy failed:", err);
-    toast.error({ title: 'Error!', message: 'Your action was completed successfully.' }, { position: 'top-center', timeout: 5000 });
+    toast.error({ title: 'ສຳເລັດ!', message: 'ການເພີ່ມຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ' }, { position: 'top-center', timeout: 5000 });
   }
 
   document.body.removeChild(textarea);
