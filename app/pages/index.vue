@@ -335,7 +335,7 @@ function fallbackCopy(text) {
 }
 
 .action-btn {
-  padding: 1.5rem 2rem;
+  /* padding: 1.5rem 2rem; */
   border-radius: 16px;
   font-weight: 600;
   text-transform: none;
