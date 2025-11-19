@@ -39,12 +39,18 @@ const text = ref('')
 const result = ref('')
 
 function copy() {
-    if (result.value) {
-        console.log(result.value)
-        navigator.clipboard.writeText(result.value)
-    }
-}
-function convert() {
+  if (result?.value) {
+    navigator.clipboard.writeText(result.value)
+      .then(() => {
+        console.log("Copied:", result.value)
+      })
+      .catch(err => {
+        console.error("Failed to copy:", err)
+      })
+  } else {
+    console.warn("No result to copy")
+  }
+}unction convert() {
     const laoKeyboardMap = {
         // Top Row (Numbers and Symbols)
         '`': '"', '1': "ຢ", '2': "ຟ", '3': "ໂ", '4': "ຖ", '5': 'ຸ',
