@@ -37,13 +37,7 @@
 <script setup>
 const text = ref('')
 const result = ref('')
-const toast = useToast().show({
-    position: 'top-center',
-    title: 'Success',
-    message: 'Your action was completed successfully.',
-    type: 'success',
-    timeout: 5000,
-})
+const toast = useToast()
  
 function convert() {
     const laoKeyboardMap = {
