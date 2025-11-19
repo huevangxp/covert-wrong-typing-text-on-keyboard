@@ -161,7 +161,7 @@ function fallbackCopy(text) {
     toast.success({ title: 'Success!', message: 'Your action was completed successfully.' });
   } catch (err) {
     console.error("Fallback copy failed:", err);
-    toast.error('Copied to clipboard');
+    toast.error({ title: 'Error!', message: 'Your action was completed successfully.' });
   }
 
   document.body.removeChild(textarea);
