@@ -246,3 +246,246 @@ function fallbackCopy(text) {
   document.body.removeChild(textarea);
 }
 </script>
+<style scoped>
+.translator-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 50%, #faf5ff 100%);
+}
+
+.header-section {
+  padding: 3rem 1rem 2rem;
+}
+
+.header-content {
+  max-width: 896px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2563eb 0%, #9333ea 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  max-width: 672px;
+  margin: 0 auto;
+}
+
+.main-container {
+  max-width: 896px;
+  padding-bottom: 3rem;
+}
+
+.input-card {
+  margin-bottom: 1.5rem;
+  border: 1px solid #f3f4f6;
+}
+
+.input-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.custom-textarea :deep(.v-field) {
+  border-radius: 16px;
+  font-size: 1.125rem;
+}
+
+.custom-textarea :deep(.v-field--focused) {
+  border-color: #9333ea;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.blue-btn {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.purple-btn {
+  background: linear-gradient(90deg, #9333ea 0%, #7e22ce 100%);
+  color: white;
+}
+
+.result-card {
+  border: 1px solid #f3f4f6;
+  overflow: hidden;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #f9fafb 0%, #f3f4f6 100%);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.result-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+.copy-btn {
+  color: #9333ea;
+  text-transform: none;
+}
+
+.copy-btn:hover {
+  background-color: #faf5ff;
+}
+
+.result-content {
+  padding: 2rem;
+}
+
+.result-text {
+  font-size: 1.125rem;
+  color: #1f2937;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.result-placeholder {
+  color: #9ca3af;
+  font-style: italic;
+  margin: 0;
+}
+
+.info-cards {
+  margin-top: 1.5rem;
+}
+
+.info-card {
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.blue-card {
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+}
+
+.purple-card {
+  background-color: #faf5ff;
+  border: 1px solid #f3e8ff;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.blue-badge {
+  background-color: #2563eb;
+}
+
+.purple-badge {
+  background-color: #9333ea;
+}
+
+.info-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.blue-card .info-title {
+  color: #1e3a8a;
+}
+
+.purple-card .info-title {
+  color: #581c87;
+}
+
+.info-text {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.blue-card .info-text {
+  color: #1e40af;
+}
+
+.purple-card .info-text {
+  color: #6b21a8;
+}
+</style>
