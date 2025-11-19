@@ -161,7 +161,7 @@ function fallbackCopy(text) {
     toast.success({ title: 'ສຳເລັດ!', message: 'ການເພີ່ມຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ' }, { position: 'top-center', timeout: 5000 });
   } catch (err) {
     console.error("Fallback copy failed:", err);
-    toast.error({ title: 'ສຳເລັດ!', message: 'ການເພີ່ມຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ' }, { position: 'top-center', timeout: 5000 });
+    toast.error({ title: 'ຜິດ!', message: 'ການເພີ່ມຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ' }, { position: 'top-center', timeout: 5000 });
   }
 
   document.body.removeChild(textarea);
