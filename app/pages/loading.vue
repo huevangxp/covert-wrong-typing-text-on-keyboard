@@ -5,7 +5,7 @@
       scrollable 
       persistent :overlay="false"
       max-width="500px"
-       height="400px"
+       height="200px"
       transition="dialog-transition"
      >
       <v-card>
