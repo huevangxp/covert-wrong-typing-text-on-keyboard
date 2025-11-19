@@ -1,7 +1,6 @@
 <template>
     <div class="text-center">
-        <v-img src="/logo.png" width="400" height="400"
-            class="mx-auto" />
+        <v-img src="/logo.png" width="400" height="400" class="mx-auto" />
         <v-card-title class="">ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
             ເມື່ອລືມກົດປ່ຽນພາສາ ຕົວເລືອກອັງກິດ-ລາວ ແລະ ຕົວເລືອກລາວ-ອັງກິດ </v-card-title>
     </div>
@@ -12,29 +11,25 @@
             </v-col>
         </v-row>
         <div class="text-end">
-        <v-btn @click="convert" style="background-color: #005D86; color: white;" class="mr-2 " size="large" variant="outlined">ອັງກິດ-ລາວ</v-btn>
-        <v-btn @click="convertEng" style="background-color: #852994; color: white;" size="large" variant="outlined">ລາວ-ອັງກິດ</v-btn>
+            <v-btn @click="convert" style="background-color: #005D86; color: white;" class="mr-2 " size="large"
+                variant="outlined">ອັງກິດ-ລາວ</v-btn>
+            <v-btn @click="convertEng" style="background-color: #852994; color: white;" size="large"
+                variant="outlined">ລາວ-ອັງກິດ</v-btn>
 
         </div>
     </v-container>
     <v-container>
         <v-card class="mt-4">
             <div class="d-flex justify-space-between align-center">
-  <v-card-text class="text-underline">
-    ຜົນໄດ້ຮັບ:
-  </v-card-text>
+                <v-card-text class="text-underline">
+                    ຜົນໄດ້ຮັບ:
+                </v-card-text>
 
-  <div class="text-underline pa-3">
-    <v-btn
-      color="secondary"
-      size="small"
-      icon="mdi-content-copy"
-      variant="text"
-      @click="copy"
-    ></v-btn>
-  </div>
-</div>
-            <v-card-text >{{ result }}</v-card-text>
+                <div class="text-underline pa-3">
+                    <v-btn color="secondary" size="small" icon="mdi-content-copy" variant="text" @click="copy"></v-btn>
+                </div>
+            </div>
+            <v-card-text>{{ result }}</v-card-text>
         </v-card>
     </v-container>
 </template>
@@ -76,10 +71,10 @@ function convert() {
 
         // Row 3 (Shifted ZXCVB)
         'Z': '₭', 'X': '(', 'C': 'ຯ', 'V': 'x',
-        'B': 'ຶ້', 'N': 'ື້', 'M': 'ໆ', '<': 'ໝ', '>': '$', '?': ')', ' ': ' ' 
+        'B': 'ຶ້', 'N': 'ື້', 'M': 'ໆ', '<': 'ໝ', '>': '$', '?': ')', ' ': ' '
     };
 
-    
+
 
     let output = ''
     for (let ch of text.value) {
@@ -91,11 +86,11 @@ function convert() {
 
 }
 function convertEng() {
-    
+
 
     const laoKeyboardMapEng = {
         // Top Row (Numbers and Symbols)
-         '"': '`', "ຢ": '1', "ຟ": '2', "ໂ": '3', "ຖ": '4', "ຸ": '5',
+        '"': '`', "ຢ": '1', "ຟ": '2', "ໂ": '3', "ຖ": '4', "ຸ": '5',
         "ູ": '6', "ຄ": '7', "ຕ": '8', "ຈ": '9', "ຂ": '0', "ຊ": '-', "ໍ": '=',
 
         "’": "~", "1": "!", "2": "@", "3": "#", "4": "$", "5": "%", "6": "^", "7": "&", "8": "*", "9": "(", "0": ")", "-": "_", "+": "=",
@@ -121,7 +116,7 @@ function convertEng() {
 
         // Row 3 (Shifted ZXCVB)
         "₭": 'Z', "(": 'X', "ຯ": 'C', "x": 'V',
-        "ຶ້": 'B', "ື້": 'N', "ໆ": 'M', "ໝ": '<', "$": '>', ")": '?', ' ': ' ' 
+        "ຶ້": 'B', "ື້": 'N', "ໆ": 'M', "ໝ": '<', "$": '>', ")": '?', ' ': ' '
     };
 
     let output = ''
