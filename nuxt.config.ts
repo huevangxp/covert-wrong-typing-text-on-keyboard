@@ -8,6 +8,11 @@ export default defineNuxtConfig({
       title: 'ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດ',
       link: [
         {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/logo.png',
+        },
+        {
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/npm/vuetify@3.2.17/dist/vuetify.min.css',
         },
