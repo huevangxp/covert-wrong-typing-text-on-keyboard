@@ -33,7 +33,7 @@
               no-resize
             ></v-textarea>
             <div class="input-label">
-              <v-icon size="16" color="red">mdi-notification</v-icon>
+              <v-icon size="16" color="red">mdi-stop</v-icon>
               <span>ຜົນໄດ້ຮັບ</span>
             </div>
           </v-card-text>
