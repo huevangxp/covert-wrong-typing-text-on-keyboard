@@ -1,38 +1,117 @@
 <template>
-    <div class="text-center">
-        <v-img src="/logo.png" width="400" height="400" class="mx-auto" />
-        <div class="text-center">ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
-            ເມື່ອລືມກົດປ່ຽນພາສາ ຕົວເລືອກອັງກິດ-ລາວ ແລະ ຕົວເລືອກລາວ-ອັງກິດ </div>
-    </div>
-    <v-container>
-        <v-row>
-            <v-col cols="12">
-                <v-textarea v-model="text" placeholder="ຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ" />
-            </v-col>
-        </v-row>
-        <div class="text-end">
-            <v-btn @click="convert" style="background-color: #005D86; color: white;" class="mr-2 " size="large"
-                variant="outlined">ອັງກິດ-ລາວ</v-btn>
-            <v-btn @click="convertEng" style="background-color: #852994; color: white;" size="large"
-                variant="outlined">ລາວ-ອັງກິດ</v-btn>
-
+    <div class="translator-page">
+      <!-- Header -->
+      <div class="header-section">
+        <div class="header-content">
+          <div class="icon-wrapper">
+            <v-icon size="40" color="white">mdi-translate</v-icon>
+          </div>
+          <h1 class="main-title">Lao-English Translator</h1>
+          <p class="subtitle">
+            ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
+            <br />
+            ເມື່ອລືມກົດປ່ຽນພາສາ
+          </p>
         </div>
-    </v-container>
-    <v-container>
-        <v-card class="mt-4">
-            <div class="d-flex justify-space-between align-center">
-                <v-card-text class="text-underline">
-                    ຜົນໄດ້ຮັບ:
-                </v-card-text>
-
-                <div class="text-underline pa-3">
-                    <v-btn color="secondary" size="small" icon="mdi-content-copy" variant="text" @click="copy"></v-btn>
-                </div>
+      </div>
+  
+      <!-- Main Content -->
+      <v-container class="main-container">
+        <!-- Input Area -->
+        <v-card class="input-card" elevation="8" rounded="xl">
+          <v-card-text class="pa-8">
+            <div class="input-label">
+              <v-icon size="16" color="purple">mdi-shimmer</v-icon>
+              <span>ຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ</span>
             </div>
-            <v-card-text>{{ result }}</v-card-text>
+            <v-textarea
+              v-model="text"
+              placeholder="ພິມຂໍ້ຄວາມຂອງທ່ານທີ່ນີ້..."
+              variant="outlined"
+              rows="6"
+              class="custom-textarea"
+              no-resize
+            ></v-textarea>
+          </v-card-text>
         </v-card>
-    </v-container>
-</template>
+  
+        <!-- Buttons -->
+        <div class="button-group">
+          <v-btn
+            size="large"
+            class="action-btn blue-btn"
+            elevation="4"
+            @click="convert"
+          >
+            <span>ອັງກິດ-ລາວ</span>
+            <v-icon end>mdi-arrow-right</v-icon>
+          </v-btn>
+          <v-btn
+            size="large"
+            class="action-btn purple-btn"
+            elevation="4"
+            @click="convertEng"
+          >
+            <span>ລາວ-ອັງກິດ</span>
+            <v-icon end>mdi-arrow-right</v-icon>
+          </v-btn>
+        </div>
+  
+        <!-- Result Area -->
+        <v-card class="result-card" elevation="8" rounded="xl">
+          <div class="result-header">
+            <div class="result-title">
+              <div class="status-dot"></div>
+              <span>ຜົນໄດ້ຮັບ</span>
+            </div>
+            <v-btn
+              size="small"
+              variant="text"
+              class="copy-btn"
+              @click="copy"
+            >
+              <v-icon start size="18">mdi-content-copy</v-icon>
+              {{ copied ? 'ຄັດລອກແລ້ວ!' : 'ຄັດລອກ' }}
+            </v-btn>
+          </div>
+          <v-card-text class="result-content">
+            <p v-if="result" class="result-text">{{ result }}</p>
+            <p v-else class="result-placeholder">ຜົນການແປຈະປາກົດຢູ່ທີ່ນີ້...</p>
+          </v-card-text>
+        </v-card>
+  
+        <!-- Info Cards -->
+        <v-row class="info-cards">
+          <v-col cols="12" md="6">
+            <v-card class="info-card blue-card" elevation="2" rounded="xl">
+              <v-card-text class="pa-6">
+                <div class="info-header">
+                  <div class="info-badge blue-badge">EN</div>
+                  <h4 class="info-title">English to Lao</h4>
+                </div>
+                <p class="info-text">
+                  ພິມດ້ວຍແປ້ນພິມພາສາອັງກິດ ແລະ ຄລິກປຸ່ມອັງກິດ-ລາວ
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+          <v-col cols="12" md="6">
+            <v-card class="info-card purple-card" elevation="2" rounded="xl">
+              <v-card-text class="pa-6">
+                <div class="info-header">
+                  <div class="info-badge purple-badge">LA</div>
+                  <h4 class="info-title">Lao to English</h4>
+                </div>
+                <p class="info-text">
+                  ພິມດ້ວຍແປ້ນພິມພາສາລາວ ແລະ ຄລິກປຸ່ມລາວ-ອັງກິດ
+                </p>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+  </template>
 
 <script setup>
 const text = ref('')
