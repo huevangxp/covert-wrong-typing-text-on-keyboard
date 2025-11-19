@@ -21,7 +21,7 @@
         <v-card class="mt-4">
             <div class="d-flex justify-space-between">
                 <v-card-text class="text-underline">ຜົນໄດ້ຮັບ:</v-card-text>
-            <div class="text-underline pa-3"><v-btn color="secondary" size="small" icon="mdi-content-copy" variant="text"></v-btn></div>
+            <div class="text-underline pa-3"><v-btn color="secondary" size="small" icon="mdi-content-copy" variant="text" @click="copy"></v-btn></div>
             </div>
             <v-card-text >{{ result }}</v-card-text>
         </v-card>
@@ -32,7 +32,9 @@
 const text = ref('')
 const result = ref('')
 
-
+function copy() {
+    navigator.clipboard.writeText(result.value)
+}
 function convert() {
     const laoKeyboardMap = {
         // Top Row (Numbers and Symbols)
