@@ -19,7 +19,10 @@
     </v-container>
     <v-container>
         <v-card class="mt-4">
+            <div class="d-flex">
+                <v-card-text class="text-underline">ຜິດທີ່ປ່ຽນພາສາ:</v-card-text>
             <v-card-text class="text-underline">ຜິດທີ່ປ່ຽນພາສາ:</v-card-text>
+            </div>
             <v-card-text >{{ result }}</v-card-text>
         </v-card>
     </v-container>
