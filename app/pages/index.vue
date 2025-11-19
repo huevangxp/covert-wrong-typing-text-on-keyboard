@@ -39,7 +39,10 @@ const text = ref('')
 const result = ref('')
 
 function copy() {
-    navigator.clipboard.writeText(result.value)
+    if (result.value) {
+        console.log(result.value)
+        navigator.clipboard.writeText(result.value)
+    }
 }
 function convert() {
     const laoKeyboardMap = {
