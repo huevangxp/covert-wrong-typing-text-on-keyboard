@@ -21,7 +21,7 @@
         <v-card class="mt-4">
             <div class="d-flex justify-space-between">
                 <v-card-text class="text-underline">ຜິດທີ່ປ່ຽນພາສາ:</v-card-text>
-            <div class="text-underline">ຜິດທີ່ປ່ຽນພາສາ:</div>
+            <div class="text-underline pa-3">ຜິດທີ່ປ່ຽນພາສາ:</div>
             </div>
             <v-card-text >{{ result }}</v-card-text>
         </v-card>
