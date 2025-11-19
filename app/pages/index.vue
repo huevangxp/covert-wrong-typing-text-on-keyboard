@@ -32,6 +32,10 @@
               class="custom-textarea"
               no-resize
             ></v-textarea>
+            <div class="input-label">
+              <v-icon size="16" color="purple">mdi-shimmer</v-icon>
+              <span>ຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ</span>
+            </div>
           </v-card-text>
         </v-card>
   
