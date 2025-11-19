@@ -157,13 +157,8 @@ function fallbackCopy(text) {
   try {
     document.execCommand("copy");
     // console.log("Copied (fallback):", text);
-    toast.success('Your action was completed successfully.', {
-  position: 'top-right',
-  autoClose: 5000,
-  style: {
-    color: 'white',
-  },
-});
+    // add toast
+    toast.success({ title: 'Success!', message: 'Your action was completed successfully.' }, { position: 'top-center', timeout: 5000 });
   } catch (err) {
     console.error("Fallback copy failed:", err);
     toast.error({ title: 'Error!', message: 'Your action was completed successfully.' }, { position: 'top-center', timeout: 5000 });
