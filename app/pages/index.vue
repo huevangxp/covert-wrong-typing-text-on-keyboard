@@ -138,7 +138,7 @@ function convertEng() {
 
     let output = ''
     for (let ch of text.value) {
-        output += laoKeyboardMap[ch] ?? ch
+        output += laoKeyboardMapEng[ch] ?? ch
     }
 
     result.value = output
