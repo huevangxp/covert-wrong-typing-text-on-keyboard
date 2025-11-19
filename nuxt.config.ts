@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
   
   modules: [
-    '@nuxtjs/toast',
+    // '@nuxtjs/toast',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
