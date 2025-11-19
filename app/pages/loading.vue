@@ -34,7 +34,7 @@
   .loading {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 120px;
     height: 100px;
     gap: 8px;
