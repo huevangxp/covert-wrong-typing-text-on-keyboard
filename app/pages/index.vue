@@ -50,7 +50,8 @@ function copy() {
   } else {
     console.warn("No result to copy")
   }
-}unction convert() {
+}
+function convert() {
     const laoKeyboardMap = {
         // Top Row (Numbers and Symbols)
         '`': '"', '1': "ຢ", '2': "ຟ", '3': "ໂ", '4': "ຖ", '5': 'ຸ',
