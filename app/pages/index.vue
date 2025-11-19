@@ -42,6 +42,7 @@
             class="action-btn blue-btn"
             elevation="4"
             @click="convert"
+            style="background-color: #005D86; color: white;"
           >
             <span>ອັງກິດ-ລາວ</span>
             <v-icon end>mdi-arrow-right</v-icon>
@@ -51,6 +52,7 @@
             class="action-btn purple-btn"
             elevation="4"
             @click="convertEng"
+            style="background-color: #852994; color: white;"
           >
             <span>ລາວ-ອັງກິດ</span>
             <v-icon end>mdi-arrow-right</v-icon>
