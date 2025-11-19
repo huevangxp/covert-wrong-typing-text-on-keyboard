@@ -20,7 +20,7 @@
     <v-container>
         <v-card class="mt-4">
             <div class="d-flex justify-space-between">
-                <v-card-title class="text-underline">ຜົນໄດ້ຮັບ:</v-card-title>
+                <v-card-text class="text-underline">ຜົນໄດ້ຮັບ:</v-card-text>
             <div class="text-underline pa-3"><v-btn color="secondary" size="large" icon="mdi-content-copy" variant="text"></v-btn></div>
             </div>
             <v-card-text >{{ result }}</v-card-text>
