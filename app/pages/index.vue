@@ -156,7 +156,8 @@ function fallbackCopy(text) {
 
   try {
     document.execCommand("copy");
-    console.log("Copied (fallback):", text);
+    // console.log("Copied (fallback):", text);
+
   } catch (err) {
     console.error("Fallback copy failed:", err);
   }
