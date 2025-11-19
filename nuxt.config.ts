@@ -26,15 +26,12 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   
-  modules: [
-    '@nuxtjs/toast',
-    (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }))
-      })
-    },
-  ],
+  modules: ['@nuxtjs/toast', (_options, nuxt) => {
+    nuxt.hooks.hook('vite:extendConfig', (config) => {
+      // @ts-expect-error
+      config.plugins.push(vuetify({ autoImport: true }))
+    })
+  }, 'nuxt-toast'],
   
   vite: {
     vue: {
