@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <v-img src="/logo.png" width="400" height="400" class="mx-auto" />
+        <v-img src="/logo.png" width="300" height="300" class="mx-auto" />
         <div class="text-center">ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
             ເມື່ອລືມກົດປ່ຽນພາສາ ຕົວເລືອກອັງກິດ-ລາວ ແລະ ຕົວເລືອກລາວ-ອັງກິດ </div>
     </div>
