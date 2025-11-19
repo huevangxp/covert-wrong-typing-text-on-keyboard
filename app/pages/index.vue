@@ -38,19 +38,7 @@
 const text = ref('')
 const result = ref('')
 
-function copy() {
-  if (result?.value) {
-    navigator.clipboard.writeText(result.value)
-      .then(() => {
-        console.log("Copied:", result.value)
-      })
-      .catch(err => {
-        console.error("Failed to copy:", err)
-      })
-  } else {
-    console.warn("No result to copy")
-  }
-}
+ 
 function convert() {
     const laoKeyboardMap = {
         // Top Row (Numbers and Symbols)
@@ -138,5 +126,41 @@ function convertEng() {
 
 
 
+}
+
+function copy() {
+  if (!result?.value) return;
+
+  const text = result.value;
+
+  // Modern API available?
+  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text)
+      .then(() => console.log("Copied:", text))
+      .catch(err => {
+        console.error("Clipboard error:", err);
+        fallbackCopy(text);
+      });
+  } else {
+    fallbackCopy(text);
+  }
+}
+
+function fallbackCopy(text) {
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    document.execCommand("copy");
+    console.log("Copied (fallback):", text);
+  } catch (err) {
+    console.error("Fallback copy failed:", err);
+  }
+
+  document.body.removeChild(textarea);
 }
 </script>
