@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
   
   modules: [
-     (_options, nuxt) => {
+    (_options, nuxt) => {
     nuxt.hooks.hook('vite:extendConfig', (config) => {
       // @ts-expect-error
       config.plugins.push(vuetify({ autoImport: true }))
