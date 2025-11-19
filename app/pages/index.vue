@@ -158,10 +158,10 @@ function fallbackCopy(text) {
     document.execCommand("copy");
     // console.log("Copied (fallback):", text);
     // add toast
-    toast.success({ title: 'Success!', message: 'Your action was completed successfully.' });
+    toast.success({ title: 'Success!', message: 'Your action was completed successfully.' }, { position: 'top-center', timeout: 5000 });
   } catch (err) {
     console.error("Fallback copy failed:", err);
-    toast.error({ title: 'Error!', message: 'Your action was completed successfully.' });
+    toast.error({ title: 'Error!', message: 'Your action was completed successfully.' }, { position: 'top-center', timeout: 5000 });
   }
 
   document.body.removeChild(textarea);
