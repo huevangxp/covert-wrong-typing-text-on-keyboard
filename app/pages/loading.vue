@@ -2,7 +2,7 @@
     <div class="h-screen w-screen d-flex align-center justify-center bg-white">
      <v-dialog
       v-model="dialog"
-      scrollable  
+      scrollable 
       persistent :overlay="false"
       max-width="500px"
       transition="dialog-transition"
