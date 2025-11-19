@@ -42,6 +42,7 @@ const toast = useToast().show({
     title: 'Success',
     message: 'Your action was completed successfully.',
     type: 'success',
+    timeout: 5000,
 })
  
 function convert() {
