@@ -12,3 +12,9 @@
         </v-app>
     </div>
 </template>
+
+<style>
+    * {
+        font-family: 'Noto Sans Lao', sans-serif;
+    }
+</style>
