@@ -19,10 +19,21 @@
     </v-container>
     <v-container>
         <v-card class="mt-4">
-            <div class="d-flex justify-space-between">
-                <v-card-text class="text-underline">ຜົນໄດ້ຮັບ:</v-card-text>
-            <div class="text-underline pa-3"><v-btn color="secondary" size="small" icon="mdi-content-copy" variant="text" @click="copy"></v-btn></div>
-            </div>
+            <div class="d-flex justify-space-between align-center">
+  <v-card-text class="text-underline">
+    ຜົນໄດ້ຮັບ:
+  </v-card-text>
+
+  <div class="text-underline pa-3">
+    <v-btn
+      color="secondary"
+      size="small"
+      icon="mdi-content-copy"
+      variant="text"
+      @click="copy"
+    ></v-btn>
+  </div>
+</div>
             <v-card-text >{{ result }}</v-card-text>
         </v-card>
     </v-container>
