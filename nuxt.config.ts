@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/vuetify@3.2.17/dist/vuetify.min.css',
+          href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@100..900&display=swap',
         },
       ],
     },
