@@ -12,8 +12,8 @@
             </v-col>
         </v-row>
         <div class="text-end">
-        <v-btn @click="convert" class="font-weight-bold " size="large" variant="elevated">ປ່ຽນພາສາອັງກິດ ຫາ ພາສາລາວ</v-btn>
-        <v-btn @click="convert" class="font-weight-bold " size="large" variant="elevated">ປ່ຽນພາສາລາວ ຫາ ພາສາອັງກິດ</v-btn>
+        <v-btn @click="convert"  size="large" variant="elevated">ປ່ຽນພາສາອັງກິດ ຫາ ພາສາລາວ</v-btn>
+        <v-btn @click="convert"  size="large" variant="elevated">ປ່ຽນພາສາລາວ ຫາ ພາສາອັງກິດ</v-btn>
 
         </div>
     </v-container>
