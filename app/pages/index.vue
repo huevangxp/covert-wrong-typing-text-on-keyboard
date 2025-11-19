@@ -12,7 +12,7 @@
             </v-col>
         </v-row>
         <div class="text-end">
-        <v-btn @click="convert" class="bg-[#005D86]" size="large" variant="elevated">ອັງກິດ-ລາວ</v-btn>
+        <v-btn @click="convert" style="background-color: #005D86;" size="large" variant="elevated">ອັງກິດ-ລາວ</v-btn>
         <v-btn @click="convert" class="bg-[#005D86]" size="large" variant="elevated">ລາວ-ອັງກິດ</v-btn>
 
         </div>
