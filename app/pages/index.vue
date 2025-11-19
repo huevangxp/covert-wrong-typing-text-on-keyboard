@@ -61,14 +61,6 @@ function convert() {
         'B': 'ຶ້', 'N': 'ື້', 'M': 'ໆ', '<': 'ໝ', '>': '$', '?': ')', ' ': ' ' 
     };
 
-    let output = ''
-    for (let ch of text.value) {
-        output += laoKeyboardMap[ch] ?? ch
-    }
-
-    result.value = output
-
-
     const laoKeyboardMapEng = {
         // Top Row (Numbers and Symbols)
          '"': '`', "ຢ": '1', "ຟ": '2', "ໂ": '3', "ຖ": '4', "ຸ": '5',
@@ -99,5 +91,15 @@ function convert() {
         "₭": 'Z', "(": 'X', "ຯ": 'C', "x": 'V',
         "ຶ້": 'B', "ື້": 'N', "ໆ": 'M', "ໝ": '<', "$": '>', ")": '?', ' ': ' ' 
     };
+
+    let output = ''
+    for (let ch of text.value) {
+        output += laoKeyboardMapEng[ch] ?? ch
+    }
+
+    result.value = output
+
+
+
 }
 </script>
