@@ -34,7 +34,7 @@
             ></v-textarea>
             <div class="input-label">
               <v-icon size="16" color="red">mdi-stop</v-icon>
-              <span>ຜົນໄດ້ຮັບ</span>
+              <span>ຖ້າເປັນການປ່ຽນພາສາລາວ ມາ ເປັນພາສາອັງກິດ ແມ່ນແນະນຳໃຫ້ພິມເປັນຕົວໜ້ອຍ</span>
             </div>
           </v-card-text>
         </v-card>
