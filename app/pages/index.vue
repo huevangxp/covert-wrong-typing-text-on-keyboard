@@ -37,7 +37,7 @@
 <script setup>
 const text = ref('')
 const result = ref('')
-
+const toast = useToast()
  
 function convert() {
     const laoKeyboardMap = {
@@ -158,9 +158,10 @@ function fallbackCopy(text) {
     document.execCommand("copy");
     // console.log("Copied (fallback):", text);
     // add toast
-    // toast('Copied to clipboard');
+    toast.success('Copied to clipboard');
   } catch (err) {
     console.error("Fallback copy failed:", err);
+    toast.error('Copied to clipboard');
   }
 
   document.body.removeChild(textarea);
