@@ -34,7 +34,7 @@
             ></v-textarea>
             <div class="input-label">
               <v-icon size="16" color="purple">mdi-shimmer</v-icon>
-              <span>ຂໍ້ຄວາມທີ່ຈະປ່ຽນພາສາ</span>
+              <span>ຜົນໄດ້ຮັບ</span>
             </div>
           </v-card-text>
         </v-card>
