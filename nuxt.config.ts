@@ -4,7 +4,8 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   app: {
     head: {
-      titleTemplate: 'ພິມຜິດ',
+      titleTemplate: 'ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດ',
+      title: 'ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດ',
       link: [
         {
           rel: 'stylesheet',
