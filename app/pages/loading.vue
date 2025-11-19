@@ -5,10 +5,10 @@
       scrollable 
       persistent :overlay="false"
       max-width="500px"
-       height="200px"
+       height="250px"
       transition="dialog-transition"
      >
-      <v-card>
+      <v-card class="d-flex align-center justify-center">
         <v-card-title>
           <div class="loading">
         <span></span>
