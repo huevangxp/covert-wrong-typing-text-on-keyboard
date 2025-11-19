@@ -6,7 +6,7 @@
           <div class="icon-wrapper">
             <v-icon size="40" color="white">mdi-translate</v-icon>
           </div>
-          <h1 class="main-title">Lao-English Translator</h1>
+          <h1 class="main-title">Lao-English Converter</h1>
           <p class="subtitle">
             ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ
             <br />
