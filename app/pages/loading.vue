@@ -1,6 +1,15 @@
 <template>
     <div class="h-screen w-screen d-flex align-center justify-center bg-white">
-      <div class="loading">
+     <v-dialog
+      v-model="dialog"
+      scrollable fullscreen 
+      persistent :overlay="false"
+      max-width="500px"
+      transition="dialog-transition"
+     >
+      <v-card>
+        <v-card-title>
+          <div class="loading">
         <span></span>
         <span></span>
         <span></span>
@@ -10,8 +19,15 @@
         <span></span>
         <span></span>
       </div>
+        </v-card-title>
+      </v-card>
+     </v-dialog>
     </div>
   </template>
+  
+  <script setup>
+  const dialog = ref(false)
+  </script>
   
   <style scoped>
   .loading {
