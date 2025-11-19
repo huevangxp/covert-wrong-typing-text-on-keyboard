@@ -15,6 +15,6 @@
 
 <style>
     * {
-        font-family: 'Noto Sans Lao', sans-serif;
+        font-family:'Roboto Slab', 'Noto Sans Lao', sans-serif;
     }
 </style>
