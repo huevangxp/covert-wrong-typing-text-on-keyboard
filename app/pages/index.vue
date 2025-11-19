@@ -4,7 +4,7 @@
       <div class="header-section">
         <div class="header-content">
           <div class="icon-wrapper">
-            <v-icon size="40" color="white">mdi-translate</v-icon>
+            <v-icon size="40" color="white">mdi-keyboard</v-icon>
           </div>
           <h1 class="main-title">Lao-English Converter</h1>
           <p class="subtitle">
