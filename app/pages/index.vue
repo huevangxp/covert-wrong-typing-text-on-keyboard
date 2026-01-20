@@ -253,7 +253,7 @@ function openSupport() {
 }
 
 onMounted(() => {
-  const savedCount = localStorage.getItem('translation_count');
+  const savedCount = localStorage.getItem("translation_count");
   if (savedCount) {
     submissionCount.value = parseInt(savedCount);
   }
@@ -266,9 +266,38 @@ function checkLimit() {
     return false;
   }
   submissionCount.value++;
-  localStorage.setItem('translation_count', submissionCount.value.toString());
+  localStorage.setItem("translation_count", submissionCount.value.toString());
   return true;
 }
+function openQrCode() {
+  window.open("/qrcode.png", "_blank");
+}
+
+function addToHistory(original, converted, type) {
+  if (!original || !converted) return;
+  if (
+    history.value.length > 0 &&
+    history.value[0].original === original &&
+    history.value[0].result === converted
+  )
+    return;
+
+  history.value.unshift({
+    original,
+    result: converted,
+    type,
+    timestamp: new Date(),
+  });
+  if (history.value.length > 10) history.value.pop();
+}
+
+function clearHistory() {
+  history.value = [];
+}
+
+function copyHistoryItem(text) {
+  if (!text) return;
+  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
     navigator.clipboard
       .writeText(text)
       .then(() =>
