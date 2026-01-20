@@ -190,7 +190,9 @@
                 class="rounded-lg"
               ></v-img>
             </div>
-            <p class="text-caption text-grey">ສະແກນ QR Code ເພື່ອຊຳລະເງິນ</p>
+            <p class="text-caption text-grey">
+              <span>ສະແກນ QR Code ເພື່ອຊຳລະເງິນ</span>
+            </p>
           </v-card-text>
           <v-card-actions class="justify-center">
             <v-btn
