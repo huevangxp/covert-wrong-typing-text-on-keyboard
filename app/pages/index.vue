@@ -275,8 +275,13 @@ async function addToHistory(original, converted, type) {
   }
 }
 
-function clearHistory() {
+async function clearHistory() {
   history.value = [];
+  try {
+    await $fetch("/api/history", { method: "DELETE" });
+  } catch (e) {
+    console.error("Failed to clear history:", e);
+  }
 }
 
 function copyHistoryItem(text) {
