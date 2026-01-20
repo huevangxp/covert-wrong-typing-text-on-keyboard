@@ -252,25 +252,10 @@ function openSupport() {
   showPaymentDialog.value = true;
 }
 
-onMounted(async () => {
-  // Check limit from Supabase
-  try {
-    const { count } = await $fetch("/api/check-limit");
-    if (count !== null) {
-      submissionCount.value = count;
-    }
-  } catch (e) {
-    console.error("Failed to check limit:", e);
-  }
-
-  // Fetch history from Supabase
-  try {
-    const data = await $fetch("/api/history");
-    if (data) {
-      history.value = data;
-    }
-  } catch (e) {
-    console.error("Failed to fetch history:", e);
+onMounted(() => {
+  const savedCount = localStorage.getItem('translation_count');
+  if (savedCount) {
+    submissionCount.value = parseInt(savedCount);
   }
 });
 
@@ -281,54 +266,9 @@ function checkLimit() {
     return false;
   }
   submissionCount.value++;
+  localStorage.setItem('translation_count', submissionCount.value.toString());
   return true;
 }
-
-function openQrCode() {
-  window.open("/qrcode.png", "_blank");
-}
-
-async function addToHistory(original, converted, type) {
-  if (!original || !converted) return;
-  if (
-    history.value.length > 0 &&
-    history.value[0].original === original &&
-    history.value[0].result === converted
-  )
-    return;
-
-  // Optimistic update
-  history.value.unshift({
-    original,
-    result: converted,
-    type,
-    timestamp: new Date(),
-  });
-  if (history.value.length > 10) history.value.pop();
-
-  // Save to Supabase
-  try {
-    await $fetch("/api/history", {
-      method: "POST",
-      body: { original, result: converted, type },
-    });
-  } catch (e) {
-    console.error("Failed to save history:", e);
-  }
-}
-
-async function clearHistory() {
-  history.value = [];
-  try {
-    await $fetch("/api/history", { method: "DELETE" });
-  } catch (e) {
-    console.error("Failed to clear history:", e);
-  }
-}
-
-function copyHistoryItem(text) {
-  if (!text) return;
-  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
     navigator.clipboard
       .writeText(text)
       .then(() =>
