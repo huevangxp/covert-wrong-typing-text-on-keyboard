@@ -178,58 +178,6 @@
               </v-btn>
             </template>
           </v-list-item>
-        </v-list>
-      </v-card>
-      <!-- Payment Dialog -->
-      <v-dialog v-model="showPaymentDialog" max-width="400" persistent>
-        <v-card class="rounded-xl pa-4">
-          <v-card-title class="text-center font-weight-bold text-h5">
-            <span>{{
-              isSupportMode ? "ຂອບໃຈສຳລັບການສະໜັບສະໜູນ" : "ເກີນຈຳນວນທີ່ກຳນົດ"
-            }}</span>
-          </v-card-title>
-          <v-card-text class="text-center">
-            <p class="mb-4 text-body-1">
-              <span v-if="isSupportMode"
-                >ຂອບໃຈທີ່ທ່ານຕ້ອງການສະໜັບສະໜູນພວກເຮົາ!
-                ເງິນຂອງທ່ານຈະຊ່ວຍພັດທະນາເວັບໄຊໃຫ້ດີຂຶ້ນ.</span
-              >
-              <span v-else
-                >ທ່ານໄດ້ໃຊ້ງານເກີນ 10 ຄັ້ງແລ້ວ.
-                ກະລຸນາຊຳລະເງິນເພື່ອໃຊ້ງານຕໍ່.</span
-              >
-            </p>
-            <div class="d-flex justify-center mb-4">
-              <v-img
-                src="/qrcode.png"
-                max-width="200"
-                height="200"
-                class="rounded-lg cursor-pointer"
-                @click="openQrCode"
-              ></v-img>
-            </div>
-            <p class="text-caption text-grey">
-              <span>ສະແກນ QR Code ເພື່ອຊຳລະເງິນ</span>
-            </p>
-          </v-card-text>
-          <v-card-actions class="justify-center">
-            <v-btn
-              color="primary"
-              variant="flat"
-              rounded="lg"
-              @click="showPaymentDialog = false"
-            >
-              ປິດ
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
-    </v-container>
-  </div>
-</template>
-
-<script setup>
-const text = ref("");
 const result = ref("");
 const toast = useToast();
 const copied = ref(false);
@@ -902,5 +850,11 @@ function fallbackCopy(text) {
 .purple-icon {
   background-color: #faf5ff;
   color: #9333ea;
+}
+
+.footer-section {
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
 }
 </style>
