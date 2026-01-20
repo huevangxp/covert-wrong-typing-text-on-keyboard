@@ -187,7 +187,8 @@
                 src="/qrcode.png"
                 max-width="200"
                 height="200"
-                class="rounded-lg"
+                class="rounded-lg cursor-pointer"
+                @click="openQrCode"
               ></v-img>
             </div>
             <p class="text-caption text-grey">
@@ -220,9 +221,14 @@ const showPaymentDialog = ref(false);
 const submissionCount = ref(0);
 
 onMounted(async () => {
-  const savedCount = localStorage.getItem("translation_count");
-  if (savedCount) {
-    submissionCount.value = parseInt(savedCount);
+  // Check limit from Supabase
+  try {
+    const { count } = await $fetch("/api/check-limit");
+    if (count !== null) {
+      submissionCount.value = count;
+    }
+  } catch (e) {
+    console.error("Failed to check limit:", e);
   }
 
   // Fetch history from Supabase
@@ -242,8 +248,11 @@ function checkLimit() {
     return false;
   }
   submissionCount.value++;
-  localStorage.setItem("translation_count", submissionCount.value.toString());
   return true;
+}
+
+function openQrCode() {
+  window.open("/qrcode.png", "_blank");
 }
 
 async function addToHistory(original, converted, type) {
