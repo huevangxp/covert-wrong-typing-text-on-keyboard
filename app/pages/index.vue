@@ -169,6 +169,38 @@
           </v-list-item>
         </v-list>
       </v-card>
+      <!-- Payment Dialog -->
+      <v-dialog v-model="showPaymentDialog" max-width="400" persistent>
+        <v-card class="rounded-xl pa-4">
+          <v-card-title class="text-center font-weight-bold text-h5">
+            ເກີນຈຳນວນທີ່ກຳນົດ
+          </v-card-title>
+          <v-card-text class="text-center">
+            <p class="mb-4 text-body-1">
+              ທ່ານໄດ້ໃຊ້ງານເກີນ 10 ຄັ້ງແລ້ວ. ກະລຸນາຊຳລະເງິນເພື່ອໃຊ້ງານຕໍ່.
+            </p>
+            <div class="d-flex justify-center mb-4">
+              <v-img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Payment"
+                max-width="200"
+                height="200"
+                class="rounded-lg"
+              ></v-img>
+            </div>
+            <p class="text-caption text-grey">ສະແກນ QR Code ເພື່ອຊຳລະເງິນ</p>
+          </v-card-text>
+          <v-card-actions class="justify-center">
+            <v-btn
+              color="primary"
+              variant="flat"
+              rounded="lg"
+              @click="showPaymentDialog = false"
+            >
+              ປິດ
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-container>
   </div>
 </template>
@@ -179,6 +211,25 @@ const result = ref("");
 const toast = useToast();
 const copied = ref(false);
 const history = ref([]);
+const showPaymentDialog = ref(false);
+const submissionCount = ref(0);
+
+onMounted(() => {
+  const savedCount = localStorage.getItem("translation_count");
+  if (savedCount) {
+    submissionCount.value = parseInt(savedCount);
+  }
+});
+
+function checkLimit() {
+  if (submissionCount.value >= 10) {
+    showPaymentDialog.value = true;
+    return false;
+  }
+  submissionCount.value++;
+  localStorage.setItem("translation_count", submissionCount.value.toString());
+  return true;
+}
 
 function addToHistory(original, converted, type) {
   if (!original || !converted) return;
@@ -219,6 +270,8 @@ function copyHistoryItem(text) {
 }
 
 function convert() {
+  if (!checkLimit()) return;
+
   const laoKeyboardMap = {
     // Top Row (Numbers and Symbols)
     "`": '"',
@@ -337,6 +390,8 @@ function convert() {
   addToHistory(text.value, output, "en-la");
 }
 function convertEng() {
+  if (!checkLimit()) return;
+
   const laoKeyboardMapEng = {
     // Top Row (Numbers and Symbols)
     '"': "`",
