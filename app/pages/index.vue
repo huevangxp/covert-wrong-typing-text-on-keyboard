@@ -678,6 +678,15 @@ function fallbackCopy(text) {
   background-clip: text;
   margin-bottom: 1rem;
 }
+.main-title1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2563eb 0%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
 
 .subtitle {
   color: #6b7280;
