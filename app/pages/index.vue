@@ -173,7 +173,7 @@
       <v-dialog v-model="showPaymentDialog" max-width="400" persistent>
         <v-card class="rounded-xl pa-4">
           <v-card-title class="text-center font-weight-bold text-h5">
-            ເກີນຈຳນວນທີ່ກຳນົດ
+            <span> ເກີນຈຳນວນທີ່ກຳນົດ</span>
           </v-card-title>
           <v-card-text class="text-center">
             <p class="mb-4 text-body-1">
