@@ -685,7 +685,6 @@ function fallbackCopy(text) {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  margin-bottom: 0.1rem;
 }
 
 .subtitle {
