@@ -18,7 +18,7 @@
           <v-icon size="40" color="white">mdi-keyboard</v-icon>
         </div>
         <h1 class="main-title hidden-sm-and-down">Lao-English Converter</h1>
-        <p class="subtitle">
+        <p class="subtitle hidden-sm-and-down">
           ແປປະໂຫຍກ ຫຼື ຂໍ້ຄວາມທີ່ພິມຜິດຈາກພາສາອັງກິດໃຫ້ເປັນພາສາລາວ ແລະ ອັງກິດ
           <br />
           ເມື່ອລືມກົດປ່ຽນພາສາ
