@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   const xForwardedFor = getRequestHeader(event, "x-forwarded-for");
   const ip = xForwardedFor
     ? xForwardedFor.split(",")[0]
-    : event.node.req.socket.remoteAddress;
+    : event.node.req.socket.remoteAddress || "unknown";
 
   const { data, error } = await client
     .from("translation_history")
