@@ -182,6 +182,7 @@ function convert() {
     }
 
     result.value = output
+    addToHistory(text.value, output, 'en-la')
 
 
 }
