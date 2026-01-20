@@ -123,6 +123,23 @@
 const text = ref('')
 const result = ref('')
 const toast = useToast()
+const history = ref([])
+
+function addToHistory(original, converted, type) {
+  if (!original || !converted) return
+  if (history.value.length > 0 && history.value[0].original === original && history.value[0].result === converted) return
+  history.value.unshift({ original, result: converted, type, timestamp: new Date() })
+  if (history.value.length > 10) history.value.pop()
+}
+
+function clearHistory() { history.value = [] }
+
+function copyHistoryItem(text) {
+  if (!text) return;
+  if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(() => toast.success({ title: 'ສຳເລັດ!', message: 'ຄັດລອກແລ້ວ' }, { position: 'top-center', timeout: 2000 })).catch(() => fallbackCopy(text));
+  } else { fallbackCopy(text); }
+}
  
 function convert() {
     const laoKeyboardMap = {
