@@ -96,7 +96,7 @@
       </v-card>
 
       <!-- Info Cards -->
-      <v-row class="info-cards">
+      <v-row class="info-cards hidden-sm-and-down">
         <v-col cols="12" md="6">
           <v-card class="info-card blue-card" elevation="2" rounded="xl">
             <v-card-text class="pa-6">
