@@ -3,6 +3,17 @@
     <!-- Header -->
     <div class="header-section">
       <div class="header-content">
+        <div class="d-flex justify-end mb-4">
+          <v-btn
+            prepend-icon="mdi-heart"
+            color="pink"
+            variant="tonal"
+            rounded="pill"
+            @click="showPaymentDialog = true"
+          >
+            ສະໜັບສະໜູນ
+          </v-btn>
+        </div>
         <div class="icon-wrapper">
           <v-icon size="40" color="white">mdi-keyboard</v-icon>
         </div>
