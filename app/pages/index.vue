@@ -224,6 +224,14 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+
+      <!-- Footer -->
+      <div class="text-center mt-8 text-grey text-caption">
+        <p>
+          © {{ new Date().getFullYear() }} Developed by
+          <span class="font-weight-bold">huevangxp</span>. All rights reserved.
+        </p>
+      </div>
     </v-container>
   </div>
 </template>
