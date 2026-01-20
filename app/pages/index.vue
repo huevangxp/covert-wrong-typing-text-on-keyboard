@@ -214,6 +214,70 @@
 const text = ref("");
 const result = ref("");
 const toast = useToast();
+const copied = ref(false);
+const history = ref([]);
+const showPaymentDialog = ref(false);
+const submissionCount = ref(0);
+
+onMounted(async () => {
+  const savedCount = localStorage.getItem("translation_count");
+  if (savedCount) {
+    submissionCount.value = parseInt(savedCount);
+  }
+
+  // Fetch history from Supabase
+  try {
+    const data = await $fetch("/api/history");
+    if (data) {
+      history.value = data;
+    }
+  } catch (e) {
+    console.error("Failed to fetch history:", e);
+  }
+});
+
+function checkLimit() {
+  if (submissionCount.value >= 10) {
+    showPaymentDialog.value = true;
+    return false;
+  }
+  submissionCount.value++;
+  localStorage.setItem("translation_count", submissionCount.value.toString());
+  return true;
+}
+
+async function addToHistory(original, converted, type) {
+  if (!original || !converted) return;
+  if (
+    history.value.length > 0 &&
+    history.value[0].original === original &&
+    history.value[0].result === converted
+  )
+    return;
+
+  // Optimistic update
+  history.value.unshift({
+    original,
+    result: converted,
+    type,
+    timestamp: new Date(),
+  });
+  if (history.value.length > 10) history.value.pop();
+
+  // Save to Supabase
+  try {
+    await $fetch("/api/history", {
+      method: "POST",
+      body: { original, result: converted, type },
+    });
+  } catch (e) {
+    console.error("Failed to save history:", e);
+  }
+}
+
+function clearHistory() {
+  history.value = [];
+}
 
 function copyHistoryItem(text) {
   if (!text) return;
