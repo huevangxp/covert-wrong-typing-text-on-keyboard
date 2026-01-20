@@ -9,7 +9,7 @@
             color="pink"
             variant="tonal"
             rounded="pill"
-            @click="showPaymentDialog = true"
+            @click="openSupport"
           >
             ສະໜັບສະໜູນ
           </v-btn>
@@ -184,11 +184,17 @@
       <v-dialog v-model="showPaymentDialog" max-width="400" persistent>
         <v-card class="rounded-xl pa-4">
           <v-card-title class="text-center font-weight-bold text-h5">
-            <span> ເກີນຈຳນວນທີ່ກຳນົດ</span>
+            <span>{{
+              isSupportMode ? "ຂອບໃຈສຳລັບການສະໜັບສະໜູນ" : "ເກີນຈຳນວນທີ່ກຳນົດ"
+            }}</span>
           </v-card-title>
           <v-card-text class="text-center">
             <p class="mb-4 text-body-1">
-              <span
+              <span v-if="isSupportMode"
+                >ຂອບໃຈທີ່ທ່ານຕ້ອງການສະໜັບສະໜູນພວກເຮົາ!
+                ເງິນຂອງທ່ານຈະຊ່ວຍພັດທະນາເວັບໄຊໃຫ້ດີຂຶ້ນ.</span
+              >
+              <span v-else
                 >ທ່ານໄດ້ໃຊ້ງານເກີນ 10 ຄັ້ງແລ້ວ.
                 ກະລຸນາຊຳລະເງິນເພື່ອໃຊ້ງານຕໍ່.</span
               >
@@ -229,7 +235,13 @@ const toast = useToast();
 const copied = ref(false);
 const history = ref([]);
 const showPaymentDialog = ref(false);
+const isSupportMode = ref(false);
 const submissionCount = ref(0);
+
+function openSupport() {
+  isSupportMode.value = true;
+  showPaymentDialog.value = true;
+}
 
 onMounted(async () => {
   // Check limit from Supabase
@@ -255,6 +267,7 @@ onMounted(async () => {
 
 function checkLimit() {
   if (submissionCount.value >= 10) {
+    isSupportMode.value = false;
     showPaymentDialog.value = true;
     return false;
   }
