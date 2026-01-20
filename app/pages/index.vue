@@ -184,7 +184,7 @@
             </p>
             <div class="d-flex justify-center mb-4">
               <v-img
-                src="./qrcode.png"
+                src="/qrcode.png"
                 max-width="200"
                 height="200"
                 class="rounded-lg"
