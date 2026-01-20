@@ -38,7 +38,12 @@ export default defineNuxtConfig({
       });
     },
     "nuxt-toast",
+    "@nuxtjs/supabase",
   ],
+
+  supabase: {
+    redirect: false,
+  },
 
   vite: {
     vue: {
