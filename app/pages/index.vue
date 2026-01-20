@@ -177,7 +177,10 @@
           </v-card-title>
           <v-card-text class="text-center">
             <p class="mb-4 text-body-1">
-              ທ່ານໄດ້ໃຊ້ງານເກີນ 10 ຄັ້ງແລ້ວ. ກະລຸນາຊຳລະເງິນເພື່ອໃຊ້ງານຕໍ່.
+              <span
+                >ທ່ານໄດ້ໃຊ້ງານເກີນ 10 ຄັ້ງແລ້ວ.
+                ກະລຸນາຊຳລະເງິນເພື່ອໃຊ້ງານຕໍ່.</span
+              >
             </p>
             <div class="d-flex justify-center mb-4">
               <v-img
