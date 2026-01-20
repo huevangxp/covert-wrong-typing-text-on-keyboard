@@ -181,7 +181,7 @@
             </p>
             <div class="d-flex justify-center mb-4">
               <v-img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Payment"
+                src="./qrcode.png"
                 max-width="200"
                 height="200"
                 class="rounded-lg"
